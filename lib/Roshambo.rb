@@ -22,4 +22,19 @@ class Roshambo
       puts "please enter rock, paper, or scissors (only once each)"
     end
   end
+
+  def game
+    puts @player1 + ' Choose your roshambo!'
+    input1 = gets.chomp
+    # binding.pry
+    puts @player2 + ' Choose your roshambo!'
+    input2 = gets.chomp
+    if beats?(input1, input2)
+      puts @player1 + " Wins!"
+      return true
+    else
+      puts @player2 + " Wins!"
+      return false
+    end
+  end
 end
